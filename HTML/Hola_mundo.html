@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Mundo.css">
+    <link rel="stylesheet" href="../CSS/font.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="../Logoimg.png" width="70" alt="Logoimg">
+            <ul>
+                <li><a href="../Index.html">¿Qué es Django?</a></li>
+                <li><a href="Instalacion.html">Instalación</a></li>
+                <li><a href="Hola_mundo.html">Primeros pasos: "Hola mundo"</a></li>
+                <li><a href="uso.html">Uso de Django</a></li>
+                <li><a href="dudas.html">Dudas</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Hola Mundo</h2>
+            <p>
+                En este tutorial mostraremos cómo crear un proyecto inicial utilizando el framework Django. La idea es
+                crear una página web estática que muestre un mensaje cuando los usuarios solicitan una página web
+                inicial (homepage).<br><br>
+                Mostramos brevemente la estructura de una página web HTML y además agregamos una imagen.<br><br>
+
+                <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/PgVQmSwjyjg" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
+                Comandos:<br><br>
+            <ul>
+                1.- Inicia un nuevo proyecto de Django, recuerda dejar el punto final con un espacio:
+                <code>django-admin startproject unir_mexico .</code><br>
+                2.- Ejecuta el servidor de dsarrollo. Útil para hacer pruebas, pero no para producción:
+                <code>python manage.py runserver</code><br>
+                3.- Con este comando iniciamos una nueva "app" en Django. Las apps son formas de organizar el código y
+                se recomienda que cada funcionalidad de nuestras páginas web tengan su propia app:
+                <code>python manage.py startapp paginas</code><br><br>
+            </ul>
+
+            </p>
+            <p>En el siguiente enlace podrás encontrar el proyecto en GitHub:</p>
+            <a
+                href="https://github.com/VicBocanegra25/UNIR_Desarrollo_Apps_Tutorial_Django">https://github.com/VicBocanegra25/UNIR_Desarrollo_Apps_Tutorial_Django</a>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

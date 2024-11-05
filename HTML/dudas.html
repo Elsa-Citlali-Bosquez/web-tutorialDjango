@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Dudas.css">
+    <link rel="stylesheet" href="../CSS/font.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="../Logoimg.png" width="70" alt="Logoimg">
+            <ul>
+                <li><a href="../Index.html">¿Qué es Django?</a></li>
+                <li><a href="Instalacion.html">Instalación</a></li>
+                <li><a href="Hola_mundo.html">Primeros pasos: "Hola mundo"</a></li>
+                <li><a href="uso.html">Uso de Django</a></li>
+                <li><a href="dudas.html">Dudas</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Dudas</h2>
+            <h3>¿Sobre qué actúa Django?</h3><br>
+            <p>
+            <ul>
+                <li>Páginas: Django define la estructura de las páginas web a través de vistas. Estas vistas son
+                    funciones de Python que reciben una solicitud HTTP y retornan una respuesta, típicamente una
+                    plantilla HTML renderizada.</li><br>
+                <li>Modelos: Django utiliza modelos para representar los datos de tu aplicación. Estos modelos se mapean
+                    a tablas en una base de datos (por defecto, PostgreSQL, aunque puede usar otras). Los modelos
+                    definen los campos (por ejemplo, nombre, edad, correo electrónico) que almacenarán tus datos.</li>
+                <br>
+                <li>Plantillas: Las plantillas son archivos de texto que contienen la estructura HTML de tus páginas.
+                    Django las usa para generar el HTML dinámico que será enviado al navegador.</li><br>
+                <li>URLS: Django utiliza un sistema de URLS para mapear las direcciones web a las vistas
+                    correspondientes. De esta manera, cuando un usuario ingresa una URL en su navegador, Django sabe qué
+                    vista debe ejecutar.</li><br>
+                <li>Forms: Los forms de Django simplifican la creación de formularios web. Puedes definir campos,
+                    validar datos y generar el HTML necesario para mostrar y procesar los formularios.</li><br><br>
+            </ul>
+        
+            <h3>¿Cómo se modifican los archivos en Django?</h3><br>
+            <p> Es necesario familiarizarse con la estructura de directorios del proyecto. La estructura del proyecto en
+                Django incluye:
+            <ul>
+                <li>models.py: Aquí se definen los modelos que representan los datos de tu aplicación.</li><br>
+                <li>views.py: Contiene las vistas que procesan las solicitudes HTTP y generan las respuestas.</li><br>
+                <li>urls.py: Define las URL de tu aplicación y las relaciona con las vistas.</li><br>
+                <li>templates: Contiene las plantillas HTML para renderizar las páginas.</li><br>
+                <p>Estos archivos se editan con cualquier editor de texto o IDE que soporte Python. La mayoría de los
+                desarrolladores de Django utilizan editores como Visual Studio Code, PyCharm o Sublime Text. Realiza
+                cambios según sea necesario, por ejemplo si deseas agregar una nueva vista edita <code>views.py</code> y
+                define una nueva función o clase.</p><br>
+                <li>Migraciones: Si modificas modelos en models.py, recuerda ejecutar las migraciones: <code>python manage.py makemigrations<br>
+                            python manage.py migrate</code></li><br>
+                <li>Reinicia el servidor: Si tu proyecto está en ejecución, por lo general, con
+                    <code>python manage.py runserver</code> se recomienda reiniciar el servidor para que los cambios
+                    tengan efecto.</li><br><br>
+            </ul>
+            </p>
+            <h3>¿Cómo se referencian los archivos creados desde otras aplicaciones?</h3><br>
+            <p>Django permite crear aplicaciones reutilizables que pueden ser incluidas en diferentes proyectos. Para
+                referenciar archivos desde otras aplicaciones, se utilizan los siguientes mecanismos:<br><br>
+            <ul>
+                <li>Importar modelos: Puedes importar modelos de otras aplicaciones para utilizarlos en tus propias
+                    vistas y plantillas. Por ejemplo: <code>from otra_app.models import Producto</code></li><br>
+                <li>Incluir URLs: Puedes incluir las URL de otras aplicaciones en tu archivo urls.py principal. Por
+                    ejemplo: <code>from django.urls import include, path <br>
+                                from otra_app import urls as otra_app_urls<br>
+                                urlpatterns = [path('otra_app/', include(otra_app_urls)), ]</code></li><br>
+                <li>Importar vistas: para usar vistas desde otra aplicación, simplemente importa la vista en tu archivo
+                    "urls.py" o "views.py":<br><code>from otra_app.views import MiVista</code>
+                <li>Plantillas: para cargar plantillas de otra aplicación, asegúrate de que la configuración de
+                    TEMPLATES en "settings.py" incluye las rutas correctas. Luego, puedes usar el nombre de la plantilla
+                    directamente:<br>
+                    <code>{% include 'otra_app/mi_template.html' %}</code></li>
+                </li><br>
+                <li>Archivos estáticos: si necesitas referenciar archivos estáticos de otra aplicación, asegúrate de que
+                    la aplicación esté incluida en INSTALLED_APPS y utiliza la etiqueta {% static %}:<br>
+                    <code><*link rel="stylesheet" href="{% static 'otra_app/css/estilos.css' %}"*></code>
+                </li><br>
+                <p>Nota: en este último comando omite los asteriscos.</p>
+            </ul><br><br>
+
+            <p>Si tienes alguna otra duda en particular, el siguiente link te lleva a la documentación de Django: <a href="https://docs.djangoproject.com/en/5.1/" target="_blank">Documentación oficial</a></p>
+
+            </p>
+
+
+
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

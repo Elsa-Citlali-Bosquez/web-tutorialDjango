@@ -1,0 +1,85 @@
+/* Estilos para todo el documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar{
+    width: 195px;
+    background: linear-gradient(#000, #092e20);
+    overflow: auto;
+    user-select: text;
+}
+
+.sidebar img {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+    opacity: 0.8;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 12px 10px;
+    display: block;
+
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-family: sans-serif;
+    opacity: 0.7;
+    display: block;
+}
+
+
+.sidebar ul li:hover{
+    background: #4e4e4e;
+    cursor: pointer;
+
+}
+
+
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background: linear-gradient(#fff, #4b9677);
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+
+}
+
+.main-content  h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    text-align: center;
+    color: #000;
+    font-family: 'Montserrat-Medium', sans-serif;
+    
+
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+

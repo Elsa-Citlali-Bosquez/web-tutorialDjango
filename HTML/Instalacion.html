@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Instalacion.css">
+    <link rel="stylesheet" href="../CSS/font.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="../Logoimg.png" width="70" alt="Logoimg">
+            <ul>
+                <li><a href="../Index.html">¿Qué es Django?</a></li>
+                <li><a href="Instalacion.html">Instalación</a></li>
+                <li><a href="Hola_mundo.html">Primeros pasos: "Hola mundo"</a></li>
+                <li><a href="uso.html">Uso de Django</a></li>
+                <li><a href="dudas.html">Dudas</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Instalación</h2>
+            <p> En este tutorial mostraremos los pasos necesarios para ejecutar y configurar un proyecto de desarrollo
+                de páginas web utilizando el framework Django.
+                Se muestra cómo instalar Python, se explica la necesidad de configurar un ambiente virtual para cada
+                proyecto y cómo instalar Django. Finalmente, mostramos cómo crear un nuevo proyecto y como lanzar el
+                servidor local para ver nuestros cambios.<br><br>
+                <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/CONgq8l94Qg" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
+
+                Comandos:<br>
+            <ul>
+                1.- Para verificar la versión de Python instalada: <code>python --version</code><br>
+                2.- Para generar un entorno virtual de python: <code>python -m venv .ambiente_virtual</code><br>
+                3.- * Para configurar la política de scripts en powershell y permitir activar el entorno virtual: <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code><br>
+                4.- Para activar el entorno virtual: <code>.\ambiente_virtual\Scripts\Activate.ps1</code><br>
+                5.- Para actualizar pip: <code>python -m pip install --upgrade pip</code><br>
+                6.- Para instalar la versión 5.0 de Django: <code>python -m pip install django~=5.0.0</code><br>
+                7.- Para iniciar nuestro nuevo proyecto de Django: <code>django-admin startproject django_project .</code><br>
+                8.- Para ejecutar el servidor local: <code>python manage.py runserver</code>
+            </ul>
+            </p>
+            <p>
+            <br>*Nota: ".ambiente_virtual", debe corresponder con el nombre que hayas asignado a tu ambiente virtual.
+            </p>
+
+
+            
+
+        </div>
+
+        
+            
+        
+
+
+    </div>
+
+</body>
+
+</html>
